@@ -8,10 +8,10 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ action('Admin\NewsController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+                <a href="{{ action('Admin\ProfileController@add') }}" role="button" class="btn btn-primary">新規作成</a>
             </div>
             <div class="col-md-8">
-                <form action="{{ action('Admin\NewsController@index') }}" method="get">
+                <form action="{{ action('Admin\ProfileController@index') }}" method="get">
                     <div class="form-group row">
                         <label class="col-md-2">タイトル</label>
                         <div class="col-md-8">
@@ -38,14 +38,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $news)
+                            @foreach($posts as $profile)
                                 <tr>
-                                    <th>{{ $news->id }}</th>
-                                    <td>{{ str_limit($news->title, 100) }}</td>
-                                    <td>{{ str_limit($news->body, 250) }}</td>
+                                    <th>{{ $profile->id }}</th>
+                                    <td>{{ str_limit($profile->title, 100) }}</td>
+                                    <td>{{ str_limit($profile->body, 250) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">編集</a>
+                                            <a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}">編集</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -56,4 +56,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection　
