@@ -1,10 +1,10 @@
 @extends('layouts.admin')
-@section('title', '登録済みニュースの一覧')
+@section('title', '登録済みプロファイルの一覧')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <h2>ニュース一覧</h2>
+            <h2>プロファイル一覧</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
